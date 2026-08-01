@@ -1,0 +1,674 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/* Общие настройки */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f7f3;
+    color: #333;
+}
+
+/* Верхняя панель */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 80px;
+
+    background-color: white;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Логотип */
+
+header h2 {
+    color: #c9a227;
+    font-size: 32px;
+    letter-spacing: 4px;
+}
+/* Меню */
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:35px;
+    font-size:16px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+
+    width:0;
+    height:2px;
+
+    left:0;
+    bottom:-8px;
+
+    background:#c9a227;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#c9a227;
+    transform:translateY(-2px);
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+
+/* Главный экран */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Кнопка */
+
+button,
+.btn {
+
+    background-color:#c9a227;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 40px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    text-decoration:none;
+
+    display:inline-block;
+
+}
+
+button:hover{
+    background:#b38d1f;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(201,162,39,0.3);
+}
+
+/* Фотография */
+
+.hero-image img {
+    width: 600px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+/* Услуги */
+
+.services{
+    padding:80px;
+    text-align:center;
+}
+
+.services h2{
+    font-size:42px;
+    color:#222;
+    margin-bottom:50px;
+}
+
+.services-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.service-card{
+    width:300px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.35s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card h3{
+    color:#c9a227;
+}
+
+.service-card p{
+    color:#666;
+    line-height:1.6;
+}
+/* О салоне */
+
+.about{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+    padding:100px 80px;
+    background:#ffffff;
+}
+
+.about-image img{
+    width:500px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:42px;
+    color:#222;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.about-text ul{
+    list-style:none;
+    padding:0;
+    margin-bottom:30px;
+}
+
+.about-text li{
+    font-size:18px;
+    margin-bottom:15px;
+    color:#444;
+}
+/* Наши работы */
+
+.gallery{
+    padding:100px 80px;
+    background:#f8f7f3;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:42px;
+    margin-bottom:60px;
+    color:#222;
+}
+
+.gallery-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.gallery-card{
+    width:380px;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.gallery-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    display:block;
+    transition:0.4s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.05);
+}
+/* Отзывы */
+
+.reviews{
+    padding:100px 80px;
+    background:white;
+    text-align:center;
+}
+
+.reviews h2{
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+.reviews-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.review-card{
+    width:320px;
+    background:#f8f7f3;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.35s ease;
+}
+
+.review-card:hover{
+    transform:translateY(-10px);
+}
+
+.review-card h3{
+    color:#c9a227;
+    font-size:24px;
+}
+
+.review-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+.review-card h4{
+    margin-top:25px;
+    color:#222;
+}
+/* Контакты */
+
+.contact{
+    padding:100px 80px;
+    background:#222;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.contact-card{
+    width:250px;
+    background:#2d2d2d;
+    border-radius:20px;
+    padding:30px;
+    transition:0.35s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
+}
+
+.contact-card h3{
+    color:#c9a227;
+}
+
+.contact-card p{
+    color:#ddd;
+    line-height:1.7;
+}
+.contact-card a{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    color:white;
+
+    background:#c9a227;
+
+    padding:10px 25px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+}
+
+
+.contact-card a:hover{
+
+    background:#b38d1f;
+
+    transform:translateY(-3px);
+
+}
+/* Кнопки отзывов */
+
+.reviews-buttons{
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+/* ========================= */
+/*        PRICE LIST         */
+/* ========================= */
+
+.price{
+    padding:100px 80px;
+    background:#f8f7f3;
+    text-align:center;
+}
+
+.price h2{
+    font-size:42px;
+    color:#222;
+    margin-bottom:15px;
+}
+
+.price-subtitle{
+    font-size:18px;
+    color:#777;
+    margin-bottom:60px;
+}
+
+.price-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.price-card{
+    width:320px;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.35s ease;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+}
+
+.price-card h3{
+    color:#c9a227;
+    margin-bottom:25px;
+    font-size:24px;
+}
+
+.price-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #ececec;
+}
+
+.price-item:last-child{
+    border-bottom:none;
+}
+
+.price-item span:first-child{
+    color:#444;
+}
+
+.price-item span:last-child{
+    font-weight:600;
+    color:#222;
+}
+/* Почему выбирают нас */
+
+.advantages{
+    padding:100px 80px;
+    background:white;
+    text-align:center;
+}
+
+.advantages h2{
+    font-size:42px;
+    color:#222;
+    margin-bottom:15px;
+}
+
+.advantages-subtitle{
+    color:#777;
+    font-size:18px;
+    margin-bottom:60px;
+}
+
+.advantages-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.advantage-card{
+    width:300px;
+    background:#f8f7f3;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.35s ease;
+}
+
+.advantage-card:hover{
+    transform:translateY(-10px);
+}
+
+.advantage-card h3{
+    color:#c9a227;
+    margin-bottom:15px;
+}
+
+.advantage-card p{
+    color:#666;
+    line-height:1.7;
+}
+/* Специальные предложения */
+
+.offer-banner{
+    margin-top:60px;
+    background:linear-gradient(135deg,#c9a227,#e0c15a);
+    color:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.offer-banner h3{
+    margin:0 0 10px;
+    font-size:28px;
+}
+
+.offer-banner p{
+    margin:0;
+    font-size:18px;
+    opacity:0.95;
+}
+.logo{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+    color:#b38d1f;
+}
+/* ========================= */
+/* Адаптация под телефон */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    /* Header */
+
+    header{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+        margin-top:20px;
+    }
+
+    nav a{
+        margin-left:0;
+        font-size:16px;
+    }
+
+    /* Главный экран */
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:50px 25px;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-text h1{
+        font-size:38px;
+    }
+
+    .hero-text p{
+        font-size:18px;
+    }
+
+    .hero-image{
+        margin-top:35px;
+    }
+
+    .hero-image img{
+        width:100%;
+        max-width:420px;
+    }
+
+}
+    /* Наши услуги */
+
+    .services{
+        padding:60px 20px;
+    }
+
+    .services h2{
+        font-size:32px;
+    }
+
+    .services-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .service-card{
+        width:90%;
+        max-width:350px;
+    }
+
+    /* О салоне */
+
+    .about{
+        flex-direction:column;
+        padding:60px 20px;
+        text-align:center;
+    }
+
+    .about-image img{
+        width:100%;
+        max-width:350px;
+    }
+
+    .about-text h2{
+        font-size:32px;
+    }
+
+    .about-text ul{
+        text-align:left;
+        display:inline-block;
+    }
+
+    /* Наши работы */
+
+    .gallery{
+        padding:60px 20px;
+    }
+
+    .gallery h2{
+        font-size:32px;
+    }
+
+    .gallery-card{
+        width:100%;
+        max-width:350px;
+    }
+
+    /* Прайс */
+
+    .price{
+        padding:60px 20px;
+    }
+
+    .price h2{
+        font-size:32px;
+    }
+
+    .price-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .price-card{
+        width:90%;
+        max-width:350px;
+    }
